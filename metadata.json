@@ -1,0 +1,6 @@
+{
+  "name": "منصة حِصْن - الاستشعار الفضائي لمكافحة المخدرات",
+  "description": "توظيف بيانات الأقمار الاصطناعية (NASA FIRMS, MODIS, VIIRS, Sentinel-2) والذكاء الاصطناعي لدعم جهود مكافحة المخدرات وحماية المجتمع بمنطقة المدينة المنورة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
