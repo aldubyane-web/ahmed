@@ -5,13 +5,14 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/ahmed/',
     plugins: [
       react(),
       tailwindcss(),
       {
         name: 'mock-madinah-api',
         configureServer(server) {
-          server.middlewares.use('/api/suspicious/madinah', (_req, res) => {
+          const apiHandler = (_req: any, res: any) => {
             res.setHeader('Content-Type', 'application/json; charset=utf-8');
             res.setHeader('Access-Control-Allow-Origin', '*');
             const data = {
@@ -109,6 +110,20 @@ export default defineConfig(() => {
               ]
             };
             res.end(JSON.stringify(data, null, 2));
+          };
+
+          // Serve both with base and without base
+          server.middlewares.use('/api/suspicious/madinah', apiHandler);
+          server.middlewares.use('/ahmed/api/suspicious/madinah', apiHandler);
+
+          // Root redirect handler so accessing / in AI Studio dev environment automatically redirects to /ahmed/
+          server.middlewares.use((req: any, res: any, next: any) => {
+            if (req.url === '/' || req.url === '') {
+              res.writeHead(302, { Location: '/ahmed/' });
+              res.end();
+              return;
+            }
+            next();
           });
         }
       }

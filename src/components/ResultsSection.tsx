@@ -12,6 +12,7 @@ import {
   FileCheck
 } from 'lucide-react';
 import { SYSTEM_METRICS, VISION_2030_PILLARS } from '../data/mockData';
+import { hisnOfficialLogo } from '../assets';
 
 export const ResultsSection: React.FC = () => {
   return (
@@ -255,7 +256,7 @@ export const ResultsSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 rounded-xl border border-[#d4af37]/60 overflow-hidden shrink-0 shadow-lg bg-black">
               <img
-                src="/assets/aistudio/20261020-103025_200a1536.png"
+                src={hisnOfficialLogo}
                 alt="شعار حصن - وعيك حصنك"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"

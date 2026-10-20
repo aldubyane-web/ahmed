@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Satellite, Heart, ArrowUp } from 'lucide-react';
+import { hisnOfficialLogo } from '../assets';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -17,7 +18,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl border border-[#d4af37]/60 overflow-hidden bg-black shadow-[0_0_15px_rgba(212,175,55,0.3)]">
                 <img
-                  src="/assets/aistudio/20261020-103025_200a1536.png"
+                  src={hisnOfficialLogo}
                   alt="شعار حصن - وعيك حصنك"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"

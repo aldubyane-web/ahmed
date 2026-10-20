@@ -1,3 +1,5 @@
+import { sentinel2Optical, landsatThermal, sentinel1Sar } from '../assets';
+
 export interface CoherenceHistoryPoint {
   day: number;
   date: string;
@@ -140,9 +142,9 @@ export const SUSPICIOUS_SITES_MOCK: SuspiciousSite[] = [
     s1_coherence_drop_percent: 46.3, // > 40% threshold!
     s1_coherence_history: generateCoherenceHistory(19, 46.3),
     fusion_details: calculateFusionScore(97.0, 98.2, 95.0, 92.5),
-    optical_image_url: "/src/assets/images/sentinel2_optical_madinah_1792484433589.jpg",
-    thermal_image_url: "/src/assets/images/landsat_thermal_tirs_1792484434577.jpg",
-    sar_coherence_image_url: "/src/assets/images/sentinel1_sar_coherence_1792484456725.jpg",
+    optical_image_url: sentinel2Optical,
+    thermal_image_url: landsatThermal,
+    sar_coherence_image_url: sentinel1Sar,
     surface_disturbance_confirmed: true,
     thermal_engine_confirmed: true
   },
@@ -175,9 +177,9 @@ export const SUSPICIOUS_SITES_MOCK: SuspiciousSite[] = [
     s1_coherence_drop_percent: 48.1,
     s1_coherence_history: generateCoherenceHistory(17, 48.1),
     fusion_details: calculateFusionScore(96.0, 97.5, 96.0, 84.0),
-    optical_image_url: "/src/assets/images/sentinel2_optical_madinah_1792484433589.jpg",
-    thermal_image_url: "/src/assets/images/landsat_thermal_tirs_1792484434577.jpg",
-    sar_coherence_image_url: "/src/assets/images/sentinel1_sar_coherence_1792484456725.jpg",
+    optical_image_url: sentinel2Optical,
+    thermal_image_url: landsatThermal,
+    sar_coherence_image_url: sentinel1Sar,
     surface_disturbance_confirmed: true,
     thermal_engine_confirmed: true
   },
@@ -210,9 +212,9 @@ export const SUSPICIOUS_SITES_MOCK: SuspiciousSite[] = [
     s1_coherence_drop_percent: 24.5, // < 40%
     s1_coherence_history: generateCoherenceHistory(22, 24.5),
     fusion_details: calculateFusionScore(82.0, 80.0, 68.0, 95.0),
-    optical_image_url: "/src/assets/images/sentinel2_optical_madinah_1792484433589.jpg",
-    thermal_image_url: "/src/assets/images/landsat_thermal_tirs_1792484434577.jpg",
-    sar_coherence_image_url: "/src/assets/images/sentinel1_sar_coherence_1792484456725.jpg",
+    optical_image_url: sentinel2Optical,
+    thermal_image_url: landsatThermal,
+    sar_coherence_image_url: sentinel1Sar,
     surface_disturbance_confirmed: false,
     thermal_engine_confirmed: false
   },
@@ -245,9 +247,9 @@ export const SUSPICIOUS_SITES_MOCK: SuspiciousSite[] = [
     s1_coherence_drop_percent: 28.0,
     s1_coherence_history: generateCoherenceHistory(21, 28.0),
     fusion_details: calculateFusionScore(81.0, 78.0, 72.0, 65.0),
-    optical_image_url: "/src/assets/images/sentinel2_optical_madinah_1792484433589.jpg",
-    thermal_image_url: "/src/assets/images/landsat_thermal_tirs_1792484434577.jpg",
-    sar_coherence_image_url: "/src/assets/images/sentinel1_sar_coherence_1792484456725.jpg",
+    optical_image_url: sentinel2Optical,
+    thermal_image_url: landsatThermal,
+    sar_coherence_image_url: sentinel1Sar,
     surface_disturbance_confirmed: false,
     thermal_engine_confirmed: false
   },
@@ -280,9 +282,9 @@ export const SUSPICIOUS_SITES_MOCK: SuspiciousSite[] = [
     s1_coherence_drop_percent: 49.8,
     s1_coherence_history: generateCoherenceHistory(18, 49.8),
     fusion_details: calculateFusionScore(95.0, 96.0, 96.5, 93.0),
-    optical_image_url: "/src/assets/images/sentinel2_optical_madinah_1792484433589.jpg",
-    thermal_image_url: "/src/assets/images/landsat_thermal_tirs_1792484434577.jpg",
-    sar_coherence_image_url: "/src/assets/images/sentinel1_sar_coherence_1792484456725.jpg",
+    optical_image_url: sentinel2Optical,
+    thermal_image_url: landsatThermal,
+    sar_coherence_image_url: sentinel1Sar,
     surface_disturbance_confirmed: true,
     thermal_engine_confirmed: true
   }

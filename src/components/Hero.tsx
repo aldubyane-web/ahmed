@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Satellite, Flame, Trees, Sparkles, Compass, AlertCircle, ArrowDown } from 'lucide-react';
 import { SYSTEM_METRICS } from '../data/mockData';
+import { hisnHeroSatellite, hisnOfficialLogo } from '../assets';
 
 export const Hero: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ export const Hero: React.FC = () => {
       {/* Background Satellite Image with Cinematic Overlays */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hisn_hero_satellite_1792480236205.jpg"
+          src={hisnHeroSatellite}
           alt="رصد الأقمار الاصطناعية فوق المدينة المنورة والمملكة العربية السعودية"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center opacity-45 scale-105 transform hover:scale-100 transition-transform duration-1000 ease-out"
@@ -46,7 +47,7 @@ export const Hero: React.FC = () => {
             
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-[#d4af37]/40 bg-[#070b13]/80 p-2 shadow-[0_0_40px_rgba(212,175,55,0.35)] backdrop-blur-sm">
               <img
-                src="/assets/aistudio/20261020-103025_200a1536.png"
+                src={hisnOfficialLogo}
                 alt="شعار حصن - وعيك حصنك - رواد الذكاء الاصطناعي بالمدينة المنورة"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain"

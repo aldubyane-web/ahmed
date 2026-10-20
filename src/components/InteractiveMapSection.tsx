@@ -45,8 +45,13 @@ export const InteractiveMapSection: React.FC = () => {
   const fetchMockApi = async () => {
     setIsApiLoading(true);
     try {
-      const res = await fetch('/api/suspicious/madinah');
-      if (res.ok) {
+      const baseUrl = import.meta.env.BASE_URL || '/';
+      const apiUrl = baseUrl.endsWith('/') ? `${baseUrl}api/suspicious/madinah` : `${baseUrl}/api/suspicious/madinah`;
+      let res = await fetch(apiUrl).catch(() => null);
+      if (!res || !res.ok) {
+        res = await fetch('/api/suspicious/madinah').catch(() => null);
+      }
+      if (res && res.ok) {
         const json = await res.json();
         setApiData(json);
       } else {

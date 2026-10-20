@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Satellite, Radio, ExternalLink, ChevronDown } from 'lucide-react';
+import { hisnOfficialLogo } from '../assets';
 
 export const Header: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ export const Header: React.FC = () => {
             <div className="relative group cursor-pointer">
               <div className="w-13 h-13 rounded-xl border border-[#d4af37]/60 p-0.5 bg-gradient-to-br from-[#1a1f2c] to-[#0a0d14] shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-transform duration-300 group-hover:scale-105 overflow-hidden">
                 <img
-                  src="/assets/aistudio/20261020-103025_200a1536.png"
+                  src={hisnOfficialLogo}
                   alt="شعار حصن - وعيك حصنك - رواد الذكاء الاصطناعي بالمدينة المنورة"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover rounded-lg"
